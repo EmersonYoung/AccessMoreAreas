@@ -1,0 +1,65 @@
+<html lang="en">
+<style>
+      #liverpool_list {
+        visibility: visible;
+      }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Comedy Venues</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a class="logo">Access To Laugh</a>
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="navigation">
+            <ul class="menu">
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="new.html">What's New</a></li>
+				<li><a href="venues.html"class="active">Accessible Venue Database</a></li>
+				<li><a href="comedians.html">Disabled Comedian Database</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>
+                Accessible Venue Database
+            </h1>
+            <p>
+                This page will contain a list of accessible venues, with search and sorting criteria including name,
+				region, and the date on which the venue was added to our database.
+            </p>
+        </article>
+    </main>
+   
+   <label for="location">Select Location:</label>
+   <select name="location" id="location">
+		<option value="all">All Locations</option>
+		<option value="liverpool">Liverpool</option>
+		<option value="manchester">Manchester</option>
+		<option value="sheffield">Sheffield</option>
+   </select>
+   <div id="liverpool_list">Liverpool Venues</div>
+   <script>
+		const el = document.getElementById('location');
+		const list = document.getElementById('liverpool_list');
+		el.addEventListener('change', function handleChange(event) {
+			if (event.target.value === 'liverpool') {
+            list.style.visibility = 'visible';
+			} else {
+			list.style.visibility = 'hidden';
+			}
+			if (event.target.value === 'all') {
+            list.style.visibility = 'visible';
+			} 
+		});
+   </script>
+   
+</body>
+</html>
