@@ -22,9 +22,7 @@ h1{
 }
 h2{
     font-size: 25px;
-	margin-top: 20px;
 	margin-bottom: 10px;
-	padding: 0px 50px;
 	text-align: center;
 }
 p{
@@ -42,9 +40,9 @@ p{
 }
 .logo{
     display: inline-block;
-	padding: 10px;
+	padding: 15px;
     color: white;
-    font-size: 44px;
+    font-size: 35px;
     margin-left: 10px;
 }
 .navigation{
@@ -124,15 +122,16 @@ p{
 	font-size: 20px;
 }
 select{
-  border: 2px solid;
-  padding: 10px 120px 10px 5px;
-  border-radius: 5px;
-  font-size: 20px;
+	border: 2px solid;
+	padding: 10px 120px 10px 5px;
+	border-radius: 5px;
+	font-size: 20px;
 }
 .list{
-    display: block;
-	text-align: center;
-	justify-content: center;
+	display: block;
+    justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 30px;
 }
 @media (min-width: 1200px) {
     .navigation{
@@ -159,4 +158,11 @@ select{
 	padding: 0px 150px;
 	text-align: center;
 	}
+	.list{
+	display: flex;
+    justify-content: center;
+	columns: 2;
+	column-gap: 50px;
+	margin-top: 20px;
+	margin-bottom: 30px;
 }
