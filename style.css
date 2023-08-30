@@ -121,12 +121,13 @@ p{
     display: block;
 	text-align: center;
 	color: #000000;
-	font-size: 16px;
+	font-size: 20px;
 }
 select{
   border: 2px solid;
-  padding: 10px 75px 10px 10px;
+  padding: 10px 120px 10px 5px;
   border-radius: 5px;
+  font-size: 20px;
 }
 .list{
     display: block;
