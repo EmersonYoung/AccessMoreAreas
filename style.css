@@ -20,6 +20,13 @@ h1{
 	padding: 0px 50px;
 	text-align: center;
 }
+h2{
+    font-size: 25px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding: 0px 50px;
+	text-align: center;
+}
 p{
     font-size: 20px;
 	margin-bottom: 30px;
@@ -109,6 +116,22 @@ p{
 .side-menu:checked ~ .hamb .hamb-line::after {
     transform: rotate(45deg);
     top:0;
+}
+.dropdown{
+    display: block;
+	text-align: center;
+	color: #000000;
+	font-size: 16px;
+}
+select{
+  border: 1.5px solid;
+  padding: 10px 75px 10px 10px;
+  border-radius: 5px;
+}
+.list{
+    display: block;
+	text-align: center;
+	justify-content: center;
 }
 @media (min-width: 1200px) {
     .navigation{
