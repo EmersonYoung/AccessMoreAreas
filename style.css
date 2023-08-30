@@ -40,9 +40,9 @@ p{
 }
 .logo{
     display: inline-block;
-	padding: 15px;
+	padding: 17px;
     color: white;
-    font-size: 35px;
+    font-size: 30px;
     margin-left: 10px;
 }
 .navigation{
@@ -58,7 +58,7 @@ p{
 }
 .menu a{
     display: block;
-    padding: 26px 17px;
+	padding: 20px 10px;
     color: white;
 	font-size: 16px;
 }
@@ -128,8 +128,10 @@ select{
 	font-size: 20px;
 }
 .list{
-	display: block;
+    display: inline-block;
+	text-align: center;
     justify-content: center;
+	columns: 1;
 	margin-top: 20px;
 	margin-bottom: 30px;
 }
@@ -142,7 +144,13 @@ select{
         width: fit-content;
         background-color: transparent;
     }
-    .menu li{
+    .menu a{
+    display: block;
+    padding: 26px 17px;
+    color: white;
+	font-size: 16px;
+	}
+	.menu li{
         float: left;
     }
     .menu a:hover{
