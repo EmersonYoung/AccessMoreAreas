@@ -1,9 +1,4 @@
 <html lang="en">
-<style>
-      #liverpool_list {
-        visibility: visible;
-      }
-</style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,34 +27,76 @@
                 Accessible Venue Database
             </h1>
             <p>
-                This page will contain a list of accessible venues, with search and sorting criteria including name,
-				region, and the date on which the venue was added to our database.
+                This page will contain a list of accessible venues, which can be viewed in it's entirity or based on
+				location. Individual venues can be selected from this list, to link to a page showning more details of
+				specific accesibility criteria, any gigs currently known to be running at the venue, etc.
             </p>
         </article>
     </main>
-   
-   <label for="location">Select Location:</label>
-   <select name="location" id="location">
-		<option value="all">All Locations</option>
-		<option value="liverpool">Liverpool</option>
-		<option value="manchester">Manchester</option>
-		<option value="sheffield">Sheffield</option>
-   </select>
-   <div id="liverpool_list">Liverpool Venues</div>
+   <div class="dropdown">
+	   <label for="location">Select Location:  </label>
+	   <select name="location" id="location">
+			<option value="all">All Locations</option>
+			<optgroup label="North West">
+				<option value="liverpool">Liverpool</option>
+				<option value="manchester">Manchester</option>
+			</optgroup>
+			<optgroup label="Yorkshire and the Humber">
+				<option value="sheffield">Sheffield</option>
+			</optgroup>
+	   </select>
+   </div>
+   <div id="liverpool_list">
+		<ul class="list">
+			<li><a href="about.html"><h2>Venue 1, Liverpool (postcode)</h2>
+			<img src="venueimages/stage.png" alt="Venue 1 image" style="width:500px;height:300px;"></a></li>
+			<li><a href="about.html"><h2>Venue 2, Liverpool (postcode)</h2>
+			<img src="venueimages/stage.png" alt="Venue 2 image" style="width:500px;height:300px;"></a></li>
+		</ul>
+   </div>
+   <div id="manchester_list">
+		<ul class="list">
+			<li><a href="about.html"><h2>Venue 3, Manchester (postcode)</h2>
+			<img src="venueimages/stage.png" alt="Venue 3 image" style="width:500px;height:300px;"></a></li>
+			<li><a href="about.html"><h2>Venue 4, Manchester (postcode)</h2>
+			<img src="venueimages/stage.png" alt="Venue 4 image" style="width:500px;height:300px;"></a></li>
+		</ul>
+   </div> 
+   <div id="sheffield_list">
+		<ul class="list">
+			<li><a href="about.html"><h2>Venue 3, Manchester (postcode)</h2>
+			<img src="venueimages/stage.png" alt="Venue 3 image" style="width:500px;height:300px;"></a></li>
+			<li><a href="about.html"><h2>Venue 4, Manchester (postcode)</h2>
+			<img src="venueimages/stage.png" alt="Venue 4 image" style="width:500px;height:300px;"></a></li>
+		</ul>
+   </div>      
    <script>
 		const el = document.getElementById('location');
-		const list = document.getElementById('liverpool_list');
+		const liverpoollist = document.getElementById('liverpool_list');
+		const manchesterlist = document.getElementById('manchester_list');
+		const sheffieldlist = document.getElementById('sheffield_list');
 		el.addEventListener('change', function handleChange(event) {
 			if (event.target.value === 'liverpool') {
-            list.style.visibility = 'visible';
+            liverpoollist.style="display:block;"
 			} else {
-			list.style.visibility = 'hidden';
+			liverpoollist.style="display:none;"
+			}
+			if (event.target.value === 'manchester') {
+            manchesterlist.style="display:block;"
+			} else {
+			manchesterlist.style="display:none;"
+			}
+			if (event.target.value === 'sheffield') {
+            sheffieldlist.style="display:block;"
+			} else {
+			sheffieldlist.style="display:none;"
 			}
 			if (event.target.value === 'all') {
-            list.style.visibility = 'visible';
+            liverpoollist.style="display:block;"
+			manchesterlist.style="display:block;"
+			sheffieldlist.style="display:block;"
 			} 
 		});
    </script>
-   
 </body>
 </html>
